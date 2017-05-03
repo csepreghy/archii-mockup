@@ -1,6 +1,6 @@
 npm-debug.log
 .DS_Store
-dist
+build
 node_modules
 
 ### PhpStorm ###
