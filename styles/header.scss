@@ -1,0 +1,12 @@
+.header {
+  background-color: #181734;
+  height: 60px;
+  position: relative;
+  
+  img.logo {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 10px;
+  }
+}
