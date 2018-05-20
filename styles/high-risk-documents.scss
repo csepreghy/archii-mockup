@@ -1,5 +1,5 @@
 .high-risk-documents {
-  width: 800px;
+  width: 900px;
   margin: auto;
 
   .documents-header {
@@ -28,6 +28,14 @@
     }
   }
 
+  .right-lists-container {
+    display: flex;
+
+    .list-container {
+      display: inline-box;
+    }
+  }
+
   .list-container {
     width: 100%;
     display: flex;
@@ -40,6 +48,32 @@
         width: 320px;
       }
 
+      &.persons {
+        width: 220px;
+      }
+
+      &.names {
+        width: 180px;
+        position: relative;
+        left: -1px;
+      }
+
+      &.checkbox {
+        width: 80px;
+        position: relative;
+        left: -1px;
+      }
+
+      &.pending {
+        width: 60px;
+        position: relative;
+        left: -1px;
+
+        .list-header {
+          height: 29px;
+        }
+      }
+
       .list-header {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -48,6 +82,10 @@
         background-color: #f9f9f9;
         display: flex;
         justify-content: space-between;
+
+        .empty-cirlce {
+          height: 19px;
+        }
 
         .title-container {
           position: relative;
@@ -115,9 +153,54 @@
 
       .row {
         background-color: #fff;
+        height: 35px;;
         font-size: 14px;
         padding: 8px 25px;
         text-align: left;
+        position: relative;
+
+        .plus-btn {
+          cursor: pointer;
+          margin-left: 5px;
+          color: #00ACF1;
+          font-style: bold;
+        }
+
+        .info-tooltip {
+          position: absolute;
+          width: 240px;
+          background-color: #00ACF1;
+          left: 180px;
+          top: -100px;
+          color: #fff;
+          font-size: 12px;
+          padding: 20px;
+          box-shadow: 0 3px 38px rgba(0,0,0,0.30), 0 5px 22px rgba(0,0,0,0.12);
+          z-index: 100;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 60px;
+            left: -10px;
+
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+            
+            border-right: 10px solid #00ACF1; 
+          }
+
+          p.info-key {
+            margin-bottom: 5px;
+          }
+
+          p.info-value {
+            margin-bottom: 25px;
+          }
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ import Row from './Row';
 import ListHeader from './ListHeader';
 import Divider from './Divider'
 
-class ListBox extends Component {
+class KeywordsList extends Component {
 
   constructor(props) {
     super();
@@ -13,24 +13,25 @@ class ListBox extends Component {
   render() {
     return (
       <div className="list-box keywords">
-        <ListHeader />
+        <ListHeader hasInfoButton={ this.props.hasInfoButton }
+                    columnTitle={ this.props.columnTitle }/>
         <Row text="CPR Number"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="CPR Number, “cancer”"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="“Depressive”"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="“Homosexual”"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="CPR Number, “Christanity”"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="“Sex”"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="CPR Number, “Debt”"/>
-        <Divider />
+        <Divider color="grey" />
         <Row text="CPR Number, Homosexual"/>
       </div>
     );
   }
 }
-export default ListBox;
+export default KeywordsList;

@@ -25,5 +25,12 @@ button {
 .divider {
   height: 1px;
   width: 100%;
-  background-color: #d4d4d4;
+
+  &.grey {
+    background-color: #d4d4d4;
+  }
+
+  &.white {
+    background-color: #fff;
+  }
 }

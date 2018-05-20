@@ -7,9 +7,23 @@ class Divider extends Component {
 
   }
 
+  renderDivider() {
+    if (this.props.color === 'grey') {
+      return (
+        <div className="divider grey"></div>
+      );
+    } else if (this.props.color === 'white') {
+      return (
+        <div className="divider white"></div>
+      )
+    }
+  }
+ 
   render() {
     return (
-      <div className="divider"></div>
+      <div>
+        { this.renderDivider() }
+      </div>
     );
   }
 }
